@@ -30,7 +30,7 @@ function InputField({
   className = "",
   wrapperClass = "",
   ...rest
-}: React.InputHTMLAttributes<HTMLInputElement> & {
+}: Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "prefix"> & {
   label?: string;
   helper?: string;
   error?: string;
